@@ -22,14 +22,14 @@ export default async function Register(props: {
           <p>{page.description}</p>
         </div>
 
-        <div className='space-y-8'>
+        <div className='space-y-12'>
           <PageClient collection={page.type as any} />
           <Image
             src='https://cms.straqa.com/api/media/file/straqa-powered-by-dark.png'
             alt='powered by straqa'
             width={200}
             height={200}
-            className='object-contain object-center w-28'
+            className='object-contain object-center w-28 mx-auto'
           />
         </div>
       </div>
