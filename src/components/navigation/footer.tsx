@@ -55,11 +55,11 @@ const navLinks = [
     links: [
       {
         label: "Agenda",
-        url: "#",
+        url: "/#about",
       },
       {
         label: "Schedule",
-        url: "#",
+        url: "/#schedule",
       },
     ],
   },
@@ -68,11 +68,11 @@ const navLinks = [
     links: [
       {
         label: "Sponsorship",
-        url: "#",
+        url: "/sponsor",
       },
       {
         label: "Volunteer",
-        url: "#",
+        url: "/volunteer",
       },
     ],
   },
@@ -80,12 +80,12 @@ const navLinks = [
     label: "Contact & Enquiries",
     links: [
       {
-        label: "Email",
-        url: "#",
+        label: "Send an email",
+        url: "mailto:info@kingdommillionaireconvention.com",
       },
       {
         label: "Call us",
-        url: "#",
+        url: "tel:+2348165708803",
       },
     ],
   },
