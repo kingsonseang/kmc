@@ -4,14 +4,14 @@ import logo from "public/logo/primary.png";
 
 export function Footer() {
   return (
-    <footer className='border-t border-secondary'>
+    <footer id='footer' className='border-t border-secondary'>
       <div className='max-w-screen-2xl mx-auto p-4  lg:py-12'>
         <div className='flex flex-col lg:grid grid-cols-4 gap-8'>
           <div className='prose'>
             <Link href='/'>
               <Image src={logo} alt='Logo' width={200} height={50} />
             </Link>
-            <p className='opacity-70'>
+            <p className='opacity-70' data-aos='fade-up' data-aos-delay='100'>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
               consequatur nulla libero sunt ut debitis quod obcaecati dolorum,
               ullam tempore fugit.
@@ -25,7 +25,11 @@ export function Footer() {
 
                 <ul className='space-y-2'>
                   {item.links.map((link, index) => (
-                    <li key={index}>
+                    <li
+                      key={index}
+                      data-aos='fade-up'
+                      data-aos-delay={`${index + 1}00`}
+                    >
                       <Link href={link.url}>{link.label}</Link>
                     </li>
                   ))}
