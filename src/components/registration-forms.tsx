@@ -326,8 +326,7 @@ export function SponsorForm() {
           render={({ field }) => (
             <FormItem>
               <FormLabel>
-                Website / Social Media{" "}
-                <span className='text-sm'>(if applicable)</span>
+                Website / Social Media
               </FormLabel>
               <FormControl>
                 <Input placeholder='' {...field} />
