@@ -11,17 +11,26 @@ export function Header() {
 
   return (
     <header className='fixed top-0 left-0 right-0 z-10 backdrop-blur-md'>
-      <div className='flex items-center justify-between max-w-screen-2xl mx-auto p-4 pt-6'>
+      <div className='flex items-center justify-between max-w-screen-2xl mx-auto p-4 sm:p-6 pt-6 sm:pt-8'>
         <Link href='/' data-aos='fade-right'>
           <Image src={logo} alt='Logo' width={200} height={50} />
         </Link>
 
         <nav className='lg:flex gap-x-5 text-secondary hidden mix-blend-difference'>
-          <Link href='#about' data-aos='fade-left'>
+          <Link href='/#about' data-aos='fade-left'>
             About
           </Link>
-          <Link href='#schedule' data-aos='fade-left' data-aos-delay='400'>
+          <Link href='/#schedule' data-aos='fade-left' data-aos-delay='400'>
             Schedule
+          </Link>
+          <Link href='/register' data-aos='fade-left'>
+            Register
+          </Link>
+          <Link href='/sponsor' data-aos='fade-left'>
+            Sponsorship
+          </Link>
+          <Link href='/volunteer' data-aos='fade-left'>
+            Volunteer
           </Link>
           <Link href='#footer' data-aos='fade-left' data-aos-delay='600'>
             Contact us
@@ -50,10 +59,19 @@ export function Header() {
               <DrawerContent>
                 <div className='py-4 text-2xl text-secondary text-center flex flex-col justify-center items-center gap-6 h-full'>
                   <DrawerClose asChild>
-                    <Link href='#about'>About us</Link>
+                    <Link href='/#about'>About us</Link>
                   </DrawerClose>
                   <DrawerClose asChild>
-                    <Link href='#schedule'>Event Schedule</Link>
+                    <Link href='/#schedule'>Event Schedule</Link>
+                  </DrawerClose>
+                  <DrawerClose asChild>
+                    <Link href='/register'>Register</Link>
+                  </DrawerClose>
+                  <DrawerClose asChild>
+                    <Link href='/sponsor'>Sponsorship</Link>
+                  </DrawerClose>
+                  <DrawerClose asChild>
+                    <Link href='/volunteer'>Volunteer</Link>
                   </DrawerClose>
                   <DrawerClose asChild>
                     <Link href='#footer'>Contact us</Link>

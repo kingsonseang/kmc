@@ -15,7 +15,7 @@ export default function Home() {
     <article className='w-screen'>
       <div className='bg-[url(/assets/hero.png)] bg-fixed'>
         <div className='bg-gradient-to-r from-primary/30 to-60% to-transparent pt-32 xl:pt-72 pb-12 xl:pb-44'>
-          <div className='max-w-screen-2xl mx-auto p-4 pt-6 prose lg:prose-base xl:prose-md text-white'>
+          <div className='max-w-screen-2xl mx-auto p-4 sm:p-6 pt-6 sm:pt-8 prose md:prose-base xl:prose-md text-white'>
             <p data-aos='fade-down'>Kingdom Millionaires Convention 2025.</p>
             <h1 className=' text-white' data-aos='fade-up' data-aos-delay='200'>
               <Balancer>
@@ -47,7 +47,7 @@ export default function Home() {
       </div>
 
       <div id='about' className='pt-16 scroll-m-6'>
-        <div className='max-w-screen-2xl mx-auto p-4 pt-6 space-y-4 lg:space-y-8'>
+        <div className='max-w-screen-2xl mx-auto p-4 sm:p-6 pt-6 sm:pt-8 space-y-4 lg:space-y-8'>
           <p className='uppercase text-secondary' data-aos='fade-down'>
             About
           </p>
@@ -155,7 +155,7 @@ export default function Home() {
       </div>
 
       <div id='speakers' className='pt-16 scroll-m-6'>
-        <div className='max-w-screen-2xl mx-auto p-4 pt-6 space-y-4 lg:space-y-8'>
+        <div className='max-w-screen-2xl mx-auto p-4 sm:p-6 pt-6 sm:pt-8 space-y-4 lg:space-y-8'>
           <div className='prose uppercase text-secondary'>
             <p data-aos='fade-down'>Speakers</p>
           </div>
@@ -199,7 +199,7 @@ export default function Home() {
       </div>
 
       <div id='schedule' className='pt-16 scroll-m-6'>
-        <div className='max-w-screen-2xl mx-auto p-4 pt-6 space-y-4 lg:space-y-8'>
+        <div className='max-w-screen-2xl mx-auto p-4 sm:p-6 pt-6 sm:pt-8 space-y-4 lg:space-y-8'>
           <p className='uppercase text-secondary' data-aos='fade-down'>
             Schedule
           </p>
@@ -242,7 +242,7 @@ export default function Home() {
       </div>
 
       <div className='py-16'>
-        {/* <div className='max-w-screen-2xl mx-auto p-4 pt-6 space-y-4 lg:space-y-8'>
+        {/* <div className='max-w-screen-2xl mx-auto p-4 sm:p-6 pt-6 sm:pt-8 space-y-4 lg:space-y-8'>
           <p className='uppercase text-secondary' data-aos='fade-down'>
             faq&apos;s
           </p>

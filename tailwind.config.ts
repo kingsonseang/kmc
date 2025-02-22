@@ -60,7 +60,7 @@ export default {
               h1: {
                 fontWeight: "normal",
                 marginBottom: "0.2em",
-                fontSize: "2.5rem",
+                fontSize: "2rem",
               },
               h2: { marginBottom: "0.175em", fontSize: "2rem" },
             },
