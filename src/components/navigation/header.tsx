@@ -17,24 +17,16 @@ export function Header() {
         </Link>
 
         <nav className='lg:flex gap-x-5 text-secondary hidden mix-blend-difference'>
-          <Link href='/#about' data-aos='fade-left'>
-            About
-          </Link>
-          <Link href='/#schedule' data-aos='fade-left' data-aos-delay='400'>
-            Schedule
-          </Link>
-          <Link href='/register' data-aos='fade-left'>
-            Register
-          </Link>
-          <Link href='/sponsor' data-aos='fade-left'>
-            Sponsorship
-          </Link>
-          <Link href='/volunteer' data-aos='fade-left'>
-            Volunteer
-          </Link>
-          <Link href='#footer' data-aos='fade-left' data-aos-delay='600'>
-            Contact us
-          </Link>
+          {links.map((link, index) => (
+            <Link
+              key={index}
+              href={link.url}
+              data-aos='fade-left'
+              data-aos-delay={`${index + 1}00`}
+            >
+              {link.label}
+            </Link>
+          ))}
         </nav>
 
         {!isDesktop && (
@@ -58,24 +50,11 @@ export function Header() {
               </DrawerTrigger>
               <DrawerContent>
                 <div className='py-4 text-2xl text-secondary text-center flex flex-col justify-center items-center gap-6 h-full'>
-                  <DrawerClose asChild>
-                    <Link href='/#about'>About us</Link>
-                  </DrawerClose>
-                  <DrawerClose asChild>
-                    <Link href='/#schedule'>Event Schedule</Link>
-                  </DrawerClose>
-                  <DrawerClose asChild>
-                    <Link href='/register'>Register</Link>
-                  </DrawerClose>
-                  <DrawerClose asChild>
-                    <Link href='/sponsor'>Sponsorship</Link>
-                  </DrawerClose>
-                  <DrawerClose asChild>
-                    <Link href='/volunteer'>Volunteer</Link>
-                  </DrawerClose>
-                  <DrawerClose asChild>
-                    <Link href='#footer'>Contact us</Link>
-                  </DrawerClose>
+                  {links.map((link, index) => (
+                    <DrawerClose asChild key={index}>
+                      <Link href={link.url}>{link.label}</Link>
+                    </DrawerClose>
+                  ))}
                 </div>
               </DrawerContent>
             </Drawer>
@@ -85,3 +64,26 @@ export function Header() {
     </header>
   );
 }
+
+const links = [
+  {
+    label: "About",
+    url: "/#about",
+  },
+  {
+    label: "Register",
+    url: "/register",
+  },
+  {
+    label: "Sponsorship",
+    url: "/sponsor",
+  },
+  {
+    label: "Volunteer",
+    url: "/volunteer",
+  },
+  {
+    label: "Contact us",
+    url: "/#footer",
+  },
+];

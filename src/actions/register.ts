@@ -23,6 +23,15 @@ export async function register(
 
     if (!response.ok) {
       const errorDetails = await response.text();
+
+      if (errorDetails) {
+        const errorDetailsJson = JSON.parse(errorDetails);
+        if (errorDetailsJson && errorDetailsJson?.error?.[0]?.message)
+          return {
+            status: false,
+            message: errorDetailsJson?.error?.[0]?.message,
+          };
+      }
       throw new Error(
         `Failed to register: ${response.status} ${response.statusText}. Details: ${errorDetails}`
       );
