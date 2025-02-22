@@ -63,6 +63,7 @@ RUN addgroup --system --gid 1001 nodejs \
 
 # Copy public and build artifacts from the builder stage
 COPY --from=builder /app/public ./public
+COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
 COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
 
 # Change to the non-root user
