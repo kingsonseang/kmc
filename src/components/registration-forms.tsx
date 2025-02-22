@@ -152,7 +152,7 @@ export function RegistrationForm() {
               >
                 <FormControl>
                   <SelectTrigger>
-                    <SelectValue placeholder='Select a verified email to display' />
+                    <SelectValue placeholder='Select an option' />
                   </SelectTrigger>
                 </FormControl>
                 <SelectContent>
@@ -307,7 +307,7 @@ export function SponsorForm() {
               >
                 <FormControl>
                   <SelectTrigger>
-                    <SelectValue placeholder='Select a verified email to display' />
+                    <SelectValue placeholder='Select an option' />
                   </SelectTrigger>
                 </FormControl>
                 <SelectContent>
@@ -646,7 +646,7 @@ export function VolunteerForm() {
               >
                 <FormControl>
                   <SelectTrigger>
-                    <SelectValue placeholder='Select a verified email to display' />
+                    <SelectValue placeholder='Select an option' />
                   </SelectTrigger>
                 </FormControl>
                 <SelectContent>
@@ -695,7 +695,8 @@ export function VolunteerForm() {
           render={({ field }) => (
             <FormItem>
               <FormLabel>
-                What skill or experience do you have that will help in this role
+                What skill or experience do you have that will help in this
+                role?
               </FormLabel>
               <FormControl>
                 <Input placeholder='' {...field} />
