@@ -11,7 +11,7 @@ export function Footer() {
             <Link href='/'>
               <Image src={logo} alt='Logo' width={200} height={50} />
             </Link>
-            <p className='opacity-70' data-aos='fade-up' data-aos-delay='100'>
+            <p className='opacity-70'>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
               consequatur nulla libero sunt ut debitis quod obcaecati dolorum,
               ullam tempore fugit.
@@ -25,11 +25,7 @@ export function Footer() {
 
                 <ul className='space-y-2'>
                   {item.links.map((link, index) => (
-                    <li
-                      key={index}
-                      data-aos='fade-up'
-                      data-aos-delay={`${index + 1}00`}
-                    >
+                    <li key={index}>
                       <Link href={link.url}>{link.label}</Link>
                     </li>
                   ))}
@@ -67,6 +63,10 @@ const navLinks = [
     label: "Event",
     links: [
       {
+        label: "Register",
+        url: "/register",
+      },
+      {
         label: "Sponsorship",
         url: "/sponsor",
       },
@@ -81,7 +81,7 @@ const navLinks = [
     links: [
       {
         label: "Send an email",
-        url: "mailto:info@kingdommillionaireconvention.com",
+        url: "mailto:info@kingdommillionairesconvention.com",
       },
       {
         label: "Call us",

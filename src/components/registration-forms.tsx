@@ -34,7 +34,6 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/select";
-import { ToggleGroup, ToggleGroupItem } from "@/components/toggle-group";
 import {
   MultiSelector,
   MultiSelectorTrigger,
@@ -45,7 +44,7 @@ import {
 } from "@/components/multi-select";
 import { toast } from "sonner";
 import { register } from "@/actions/register";
-import { Circle, Loader2 } from "lucide-react";
+import { Loader2 } from "lucide-react";
 
 async function onSubmitRegistration(
   collection: "register" | "sponsor" | "volunteer",
@@ -127,7 +126,7 @@ export function RegistrationForm() {
           control={form.control}
           name='tel'
           render={({ field }) => (
-            <FormItem className='flex flex-col items-start'>
+            <FormItem className='flex flex-col items-start space-y-1'>
               <FormLabel className='text-left'>Phone Number</FormLabel>
               <FormControl className='w-full'>
                 <PhoneInput

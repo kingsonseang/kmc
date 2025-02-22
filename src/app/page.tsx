@@ -1,13 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
 import Balancer from "react-wrap-balancer";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/accordion";
+// import {
+//   Accordion,
+//   AccordionContent,
+//   AccordionItem,
+//   AccordionTrigger,
+// } from "@/components/accordion";
 import { Button } from "@/components/button";
+import speakers from "./speakers.json";
 
 export default function Home() {
   return (
@@ -15,10 +16,11 @@ export default function Home() {
       <div className='bg-[url(/assets/hero.png)] bg-fixed'>
         <div className='bg-gradient-to-r from-primary/30 to-60% to-transparent pt-32 xl:pt-72 pb-12 xl:pb-44'>
           <div className='max-w-screen-2xl mx-auto p-4 pt-6 prose lg:prose-base xl:prose-md text-white'>
-            <p data-aos='fade-down'>The 2024 International Conference</p>
+            <p data-aos='fade-down'>Kingdom Millionaires Convention 2025.</p>
             <h1 className=' text-white' data-aos='fade-up' data-aos-delay='200'>
               <Balancer>
-                World Congress on Emerging Technologies and Innovation 2024
+                A GATHERING OF KINGDOM FINANCIERS, CULTURE SHAPERS, & CHANGE
+                MARKERS.
               </Balancer>
             </h1>
             <div
@@ -53,10 +55,26 @@ export default function Home() {
             <div className='prose'>
               <h2 data-aos='fade-up'>About the event</h2>
               <p className='opacity-80' data-aos='fade-up' data-aos-delay='200'>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Temporibus facere porro id rem aut unde earum fugiat est
-                perspiciatis, nemo aliquid voluptate corporis ipsum ratione
-                consectetur, beatae accusamus praesentium ad?
+                The Kingdom Millionaire Convention is a groundbreaking event
+                designed to empower the Joshua Generation with tools, insights,
+                and inspiration to achieve Financial Dominion, Marketplace
+                Infiltration, and Position as Kingdom Financiers.
+                <br />
+                <br />
+                At this revolutionary gathering, participants discover that
+                kingdom success encompasses both spiritual depth and financial
+                acumen.
+                <br />
+                <br />
+                The convention proves that one can be Rich In Christ and be Rich
+                In Cash simultaneously, breaking the myth that godliness and
+                wealth are mutually exclusive.
+                <br />
+                <br />
+                The Ambassadors present will engage with industry experts,
+                renowned speakers, and seasoned entrepreneurs who share
+                innovative strategies for wealth creation and marketplace
+                intelligence.
               </p>
             </div>
 
@@ -141,9 +159,14 @@ export default function Home() {
           <div className='prose uppercase text-secondary'>
             <p data-aos='fade-down'>Speakers</p>
           </div>
+          <div className='grid gap-5 lg:grid-cols-2'>
+            <div className='prose'>
+              <h2 data-aos='fade-up'>Meet our 2025 Speakers</h2>
+            </div>
+          </div>
 
           <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'>
-            {Array.from({ length: 4 }).map((_, index) => (
+            {speakers.map((speakers, index) => (
               <div
                 key={index}
                 className='space-y-3'
@@ -152,22 +175,25 @@ export default function Home() {
               >
                 <div className='overflow-clip rounded-3xl'>
                   <Image
-                    src='/assets/demo-speaker.png'
-                    alt='demo speaker'
+                    src={`/assets/speakers/${speakers.name}.jpg`}
+                    alt={speakers.name}
                     width={400}
                     height={600}
+                    className='aspect-[1/1.2] object-cover'
                   />
                 </div>
                 <div className='text-left'>
-                  <p className='text-lg'>Sloppy Joe</p>
-                  <p className='text-sm opacity-70'>Cartoon Network Inc.</p>
+                  <p className='text-lg'>{speakers.name}</p>
+                  <p className='text-sm opacity-70'>{speakers.position}</p>
                 </div>
               </div>
             ))}
           </div>
 
           <Button asChild data-aos='fade-up' data-aos-delay='200'>
-            <Link href='#'>Apply to speak</Link>
+            <Link href='mailto:info@kingdommillionairesconvention.com'>
+              Apply to speak
+            </Link>
           </Button>
         </div>
       </div>
@@ -180,15 +206,15 @@ export default function Home() {
           <div className='grid gap-5 lg:grid-cols-2'>
             <div className='prose'>
               <h2 data-aos='fade-up'>Schedule And Agenda</h2>
-              <p data-aos='fade-up' data-aos-delay='200'>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa
-                odio totam beatae saepe, omnis optio illo, delectus distinctio
-                quas, incidunt molestias ut sapiente. Dolorem maxime vel optio,
-                quod dolor soluta.
-              </p>
+              {/* <p data-aos='fade-up' data-aos-delay='200'>
+                
+              </p> */}
             </div>
             <div className='grid gap-8'>
-              {Array.from({ length: 3 }).map((_, index) => (
+              <p data-aos='fade-up' data-aos-delay='200'>
+                Check back for the updated schedule.
+              </p>
+              {/* {Array.from({ length: 3 }).map((_, index) => (
                 <div
                   key={index}
                   className='flex gap-5'
@@ -209,14 +235,14 @@ export default function Home() {
                     </Balancer>
                   </div>
                 </div>
-              ))}
+              ))} */}
             </div>
           </div>
         </div>
       </div>
 
       <div className='py-16'>
-        <div className='max-w-screen-2xl mx-auto p-4 pt-6 space-y-4 lg:space-y-8'>
+        {/* <div className='max-w-screen-2xl mx-auto p-4 pt-6 space-y-4 lg:space-y-8'>
           <p className='uppercase text-secondary' data-aos='fade-down'>
             faq&apos;s
           </p>
@@ -246,7 +272,7 @@ export default function Home() {
               ))}
             </Accordion>
           </div>
-        </div>
+        </div> */}
       </div>
     </article>
   );
