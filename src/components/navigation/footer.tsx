@@ -12,9 +12,8 @@ export function Footer() {
               <Image src={logo} alt='Logo' width={200} height={50} />
             </Link>
             <p className='opacity-70'>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
-              consequatur nulla libero sunt ut debitis quod obcaecati dolorum,
-              ullam tempore fugit.
+              The Kingdom Millionaire Convention is a groundbreaking event designed to empower the Joshua Generation with tools, insights, and inspiration to achieve Financial Dominion, Marketplace Infiltration, and Position as Kingdom Financiers. 
+
             </p>
           </div>
 
