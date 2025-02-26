@@ -4,7 +4,7 @@ import glancyr from "./font/glancyr";
 import "./globals.css";
 import { Footer } from "@/components/navigation/footer";
 import { Header } from "@/components/navigation/header";
-import { AOSProvider } from "@/providers/aos";
+import { LenisProvider } from "@/providers/lenis";
 import { Toaster } from "@/components/sonner";
 
 export const metadata: Metadata = {
@@ -19,13 +19,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en' className='scroll-smooth'>
-      <body className={`${glancyr.className} antialiased`}>
-        <AOSProvider>
+      <body
+        className={`${glancyr.className} antialiased w-screen scrollbar-thin scrollbar-webkit`}
+      >
+        <LenisProvider>
           <Header />
           {children}
           <Footer />
           <Toaster />
-        </AOSProvider>
+        </LenisProvider>
       </body>
     </html>
   );

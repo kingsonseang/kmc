@@ -70,7 +70,7 @@ export default {
           css: [
             {
               h1: {
-                fontSize: "3.5rem",
+                fontSize: "3.1rem",
                 marginBottom: "0.2em",
                 lineHeight: "1.2",
               },
@@ -86,7 +86,7 @@ export default {
           css: [
             {
               h1: {
-                fontSize: "4.5rem",
+                fontSize: "4rem",
                 whiteSpace: "wrap",
                 marginBottom: "0.2em",
               },
@@ -100,6 +100,45 @@ export default {
         },
       }),
       keyframes: {
+        "fade-up": {
+          "0%": {
+            opacity: "0",
+            transform: "translateY(10px)",
+          },
+          "80%": {
+            opacity: "0.6",
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translateY(0px)",
+          },
+        },
+        "fade-down": {
+          "0%": {
+            opacity: "0",
+            transform: "translateY(-10px)",
+          },
+          "80%": {
+            opacity: "0.6",
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translateY(0px)",
+          },
+        },
+        "fade-all-down": {
+          "0%": {
+            opacity: "0",
+            transform: "translateY(-100%)",
+          },
+          "80%": {
+            opacity: "0.6",
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translateY(0px)",
+          },
+        },
         "accordion-down": {
           from: {
             height: "0",
@@ -118,6 +157,9 @@ export default {
         },
       },
       animation: {
+        "fade-up": "fade-up 0.5s",
+        "fade-down": "fade-down 0.5s",
+        "fade-all-down": "fade-all-down 0.5s",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
@@ -128,5 +170,35 @@ export default {
       },
     },
   },
-  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
+  future: {
+    hoverOnlyWhenSupported: true,
+  },
+  plugins: [
+    require("tailwindcss-animate"),
+    require("@tailwindcss/typography"),
+    function ({ addUtilities }: { addUtilities: any }) {
+      addUtilities(
+        {
+          ".scrollbar-thin": {
+            scrollbarWidth: "8px",
+            scrollbarColor: "rgb(31 29 29) white",
+          },
+          ".scrollbar-webkit": {
+            "&::-webskit-scrollbar": {
+              width: "8px",
+            },
+            "&::-webskit-scrollbar-track": {
+              background: "white",
+            },
+            "&::-webskit-scrollbar-thumb": {
+              backgroundColor: "rbg(31 41 55)",
+              borderRadius: "20px",
+              border: "1px solid white",
+            },
+          },
+        },
+        ["responsive", "hover"]
+      );
+    },
+  ],
 } satisfies Config;

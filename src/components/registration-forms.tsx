@@ -170,9 +170,7 @@ export function RegistrationForm() {
           name='metadata.financial_goals'
           render={({ field }) => (
             <FormItem>
-              <FormLabel>
-                What is your biggest financial goal for the next 5 years?
-              </FormLabel>
+              <FormLabel>What are your expectations?</FormLabel>
               <FormControl>
                 <Textarea placeholder='' {...field} />
               </FormControl>
@@ -325,9 +323,7 @@ export function SponsorForm() {
           name='metadata.website'
           render={({ field }) => (
             <FormItem>
-              <FormLabel>
-                Website / Social Media
-              </FormLabel>
+              <FormLabel>Website / Social Media</FormLabel>
               <FormControl>
                 <Input placeholder='' {...field} />
               </FormControl>

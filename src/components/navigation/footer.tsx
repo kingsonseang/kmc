@@ -1,23 +1,24 @@
 import Image from "next/image";
 import Link from "next/link";
 import logo from "public/logo/primary.png";
+import { FlipLink } from "../flip-link";
+import { Separator } from "../separator";
 
 export function Footer() {
   return (
-    <footer id='footer' className='border-t border-secondary'>
-      <div className='max-w-screen-2xl mx-auto p-4  lg:py-12'>
-        <div className='flex flex-col lg:grid grid-cols-4 gap-8'>
-          <div className='prose'>
-            <Link href='/'>
-              <Image src={logo} alt='Logo' width={200} height={50} />
-            </Link>
-            <p className='opacity-70'>
-              The Kingdom Millionaire Convention is a groundbreaking event designed to empower the Joshua Generation with tools, insights, and inspiration to achieve Financial Dominion, Marketplace Infiltration, and Position as Kingdom Financiers. 
-
-            </p>
+    <footer id='footer'>
+      <Separator />
+      <div className='max-w-screen-2xl mx-auto p-4 lg:py-12'>
+        <div className='flex flex-col lg:grid grid-cols-7 gap-8'>
+          <div className='space-y-4 col-span-2'>
+            <div>
+              <Link href='/'>
+                <Image src={logo} alt='Logo' width={200} height={50} />
+              </Link>
+            </div>
           </div>
 
-          <div className='col-start-3 flex flex-col gap-6 md:grid grid-cols-3 col-span-3'>
+          <div className='col-start-4 flex flex-col gap-6 md:grid grid-cols-3 col-span-3'>
             {navLinks.map((item, index) => (
               <div key={index} className='space-y-4'>
                 <p className='opacity-70 cursor-default'>{item.label}</p>
@@ -25,7 +26,7 @@ export function Footer() {
                 <ul className='space-y-2'>
                   {item.links.map((link, index) => (
                     <li key={index}>
-                      <Link href={link.url}>{link.label}</Link>
+                      <FlipLink href={link.url}>{link.label}</FlipLink>
                     </li>
                   ))}
                 </ul>
@@ -34,8 +35,9 @@ export function Footer() {
           </div>
         </div>
       </div>
-      <div className='bg-secondary p-4'>
-        <div className='max-w-screen-2xl mx-auto text-center text-sm lg:text-base'>
+      <Separator />
+      <div className='px-4 py-6'>
+        <div className='max-w-screen-2xl mx-auto text-xs text-left md:text-center lg:text-base opacity-70'>
           © Kingdom Millionaire Convention {new Date().getFullYear()}, All
           rights reserverd.
         </div>
@@ -79,11 +81,11 @@ const navLinks = [
     label: "Contact & Enquiries",
     links: [
       {
-        label: "Send an email",
+        label: "Email",
         url: "mailto:info@kingdommillionairesconvention.com",
       },
       {
-        label: "Call us",
+        label: "Phone",
         url: "tel:+2348165708803",
       },
     ],
