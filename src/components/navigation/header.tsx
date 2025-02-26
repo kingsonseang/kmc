@@ -2,7 +2,8 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import logo from "public/logo/dark.png";
+import logodark from "public/logo/light.png";
 import { Drawer, DrawerClose, DrawerContent, DrawerTrigger } from "../drawer";
 import { useMediaQuery } from "@/hooks/use-media-query";
 import { cn } from "@/utilities/ui";
@@ -10,8 +11,18 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { FlipLink } from "../flip-link";
 import { TransitionLink } from "../transition-link";
-import logo from "public/logo/dark.png";
-import logodark from "public/logo/light.png";
+
+{
+  /* <motion.header
+      initial={{ y: -100, opacity: 0 }}
+      animate={{ y: isPastHero ? 0 : -100, opacity: isPastHero ? 1 : 0 }}
+      transition={{ type: "spring", stiffness: 100, damping: 20 }}
+      className={cn("top-0 left-0 right-0 z-10 transition-all duration-300", {
+        "pt-4 absolute": !isPastHero,
+        "fixed bg-white/10 backdrop-blur-md": isPastHero,
+      })}
+    ></motion.header> */
+}
 
 export function Header() {
   const pathname = usePathname();
@@ -32,10 +43,7 @@ export function Header() {
   }, []);
 
   return (
-    <motion.header
-      initial={{ y: -100, opacity: 0 }}
-      animate={{ y: isPastHero ? 0 : -100, opacity: isPastHero ? 1 : 0 }}
-      transition={{ type: "spring", stiffness: 100, damping: 20 }}
+    <header
       className={cn("top-0 left-0 right-0 z-10 transition-all duration-300", {
         "pt-4 absolute": !isPastHero,
         "fixed bg-white/10 backdrop-blur-md": isPastHero,
@@ -103,7 +111,7 @@ export function Header() {
           </div>
         )}
       </div>
-    </motion.header>
+    </header>
   );
 }
 
