@@ -240,12 +240,6 @@ export default function Home() {
               </div>
             ))}
           </div>
-
-          {/* <Button asChild data-aos='fade-up' data-aos-delay='200'>
-            <Link href='mailto:info@kingdommillionairesconvention.com'>
-              Apply to speak
-            </Link>
-          </Button> */}
         </div>
       </div>
 
