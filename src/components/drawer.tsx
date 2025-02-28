@@ -65,7 +65,7 @@ const DrawerContent = React.forwardRef<
         <DrawerHeader className='flex justify-between p-0 pb-4'>
           <DrawerTitle />
           <DrawerClose asChild>
-            <X className='ml-auto opacity-90' />
+            <X className='ml-auto opacity-80' strokeWidth={1.5} />
           </DrawerClose>
         </DrawerHeader>
         {children}
