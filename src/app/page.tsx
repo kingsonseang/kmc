@@ -24,7 +24,7 @@ export default function Home() {
               alt=''
               // width={400}
               // height={600}
-              className='object-cover w-full h-full z-0'
+              className='object-cover w-full h-full z-0 object-top'
               fill
             />
 
